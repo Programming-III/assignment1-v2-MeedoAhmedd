@@ -11,8 +11,8 @@ using namespace std;
 // ==================== Person Class Implementation =========================
 class Person{
     protected:
-    string name;
-    int id;
+    virtual string name;
+    virtual int id;
 
     public:
     Person(string name, int id) {
@@ -20,7 +20,7 @@ class Person{
         this->id = id;
 
     }
-    void display() {
+    virtual void display() {
         cout << "Name: " << name << "ID: " << id << endl;
 
     }
@@ -31,7 +31,7 @@ class Person{
 };
 
 // ==================== Student Class Implementation ====================
-class Student {
+class Student: public Person {
     protected:
     int yrLevel;
     string major;
@@ -53,7 +53,7 @@ class Student {
 };
 
 // ==================== Instructor Class Implementation ====================
-class Instructor {
+class Instructor: public Person {
     protected:
     string department;
     int expYears;
