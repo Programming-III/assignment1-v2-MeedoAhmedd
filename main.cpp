@@ -110,10 +110,10 @@ class Course {
 
 // ==================== Main Function ====================
 int main() {
-    Person p("Nada", 101);
-    Student s("Omar Nambil");
-    Instructor i("Dr Lina Khaled");
-    Course c("Programming");
+    Person p("Nada", 16004177);
+    Student s("Omar Nambil", "CS");
+    Instructor i("CS Department", "Dr Lina Khaled");
+    Course c("1999", "Programming", 30, 7);
     c.addNewStudent(s);
     c.displayCourseInfo();
 
